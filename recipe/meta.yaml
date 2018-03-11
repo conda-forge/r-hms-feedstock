@@ -1,4 +1,4 @@
-{% set version = '0.3' %}
+{% set version = "0.4.2" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/hms_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/hms/hms_{{ version }}.tar.gz
-  sha256: 9368259cbc1094ce0e4cf61544875ec30088ef690d6667e6b0b564218ab3ff88
+  sha256: a57820b3e3221e973cba9500b4ad7953730110ee398693d150af833f26d5d0bc
 
 build:
   number: 0
