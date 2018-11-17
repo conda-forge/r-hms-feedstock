@@ -14,9 +14,9 @@ source:
   sha256: a57820b3e3221e973cba9500b4ad7953730110ee398693d150af833f26d5d0bc
 
 build:
+  noarch: generic
   merge_build_host: True  # [win]
-  number: 0
-  skip: true  # [win32]
+  number: 1000
   rpaths:
     - lib/R/lib/
     - lib/
@@ -44,8 +44,7 @@ about:
   summary: Implements an S3 class for storing and formatting time-of-day values, based on the
     'difftime' class.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'  # [unix]
-  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-3'  # [win]
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
 
 extra:
   recipe-maintainers:
