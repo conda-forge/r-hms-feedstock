@@ -1,4 +1,4 @@
-{% set version = '0.4.2' %}
+{% set version = '0.5.0' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -7,16 +7,15 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: hms_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/hms_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/hms/hms_{{ version }}.tar.gz
-  sha256: a57820b3e3221e973cba9500b4ad7953730110ee398693d150af833f26d5d0bc
+  sha256: a87872665c3bf3901f597d78c152e7805f7129e4dbe27397051de4cf1a76561b
 
 build:
-  noarch: generic
   merge_build_host: True  # [win]
-  number: 1000
+  number: 0
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
@@ -28,10 +27,12 @@ requirements:
     - r-base
     - r-pkgconfig
     - r-rlang
+    - r-vctrs >=0.2.0
   run:
     - r-base
     - r-pkgconfig
     - r-rlang
+    - r-vctrs >=0.2.0
 
 test:
   commands:
@@ -48,8 +49,25 @@ about:
 
 extra:
   recipe-maintainers:
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
+    - conda-forge/r
+
+# Package: hms
+# Title: Pretty Time of Day
+# Date: 2019-07-09
+# Version: 0.5.0
+# Authors@R: c( person("Kirill", "Muller", role = c("aut", "cre"), email = "krlmlr+r@mailbox.org"), person("The R Consortium", role = "fnd"), person("RStudio", role = "fnd") )
+# Description: Implements an S3 class for storing and formatting time-of-day values, based on the 'difftime' class.
+# Imports: methods, pkgconfig, rlang, vctrs (>= 0.2.0)
+# Suggests: crayon, lubridate, pillar (>= 1.1.0), testthat
+# License: GPL-3
+# Encoding: UTF-8
+# LazyData: true
+# URL: https://github.com/tidyverse/hms
+# BugReports: https://github.com/tidyverse/hms/issues
+# RoxygenNote: 6.1.1
+# NeedsCompilation: no
+# Packaged: 2019-07-09 09:29:38 UTC; kirill
+# Author: Kirill Muller [aut, cre], The R Consortium [fnd], RStudio [fnd]
+# Maintainer: Kirill Muller <krlmlr+r@mailbox.org>
+# Repository: CRAN
+# Date/Publication: 2019-07-09 10:50:03 UTC
