@@ -25,14 +25,18 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
+    - r-ellipsis
+    - r-lifecycle
     - r-pkgconfig
     - r-rlang
-    - r-vctrs >=0.2.0
+    - r-vctrs >=0.2.1
   run:
     - r-base
+    - r-ellipsis
+    - r-lifecycle
     - r-pkgconfig
     - r-rlang
-    - r-vctrs >=0.2.0
+    - r-vctrs >=0.2.1
 
 test:
   commands:
@@ -41,10 +45,11 @@ test:
 
 about:
   home: https://github.com/tidyverse/hms
-  license: GPL-3
+  license: MIT
   summary: Implements an S3 class for storing and formatting time-of-day values, based on the 'difftime' class.
-  license_family: GPL3
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
+  license_family: MIT
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
 
 extra:
   recipe-maintainers:
