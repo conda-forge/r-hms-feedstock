@@ -5,11 +5,9 @@ Home: https://github.com/tidyverse/hms
 
 Package license: GPL-3
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-hms-feedstock/blob/master/LICENSE.txt)
 
 Summary: Implements an S3 class for storing and formatting time-of-day values, based on the 'difftime' class.
-
-
 
 Current build status
 ====================
