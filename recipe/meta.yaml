@@ -1,4 +1,4 @@
-{% set version = "0.5.3" %}
+{% set version = "1.0.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/hms_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/hms/hms_{{ version }}.tar.gz
-  sha256: 4e2b67c8cf65fe86179f24f42d82b3ca9377d5907837bda98b4fc6c2318853ad
+  sha256: 9704e903d724f0911d46e5ad18b469a7ed419c5b1f388bd064fd663cefa6c962
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -25,14 +25,18 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
+    - r-ellipsis
+    - r-lifecycle
     - r-pkgconfig
     - r-rlang
-    - r-vctrs >=0.2.0
+    - r-vctrs >=0.2.1
   run:
     - r-base
+    - r-ellipsis
+    - r-lifecycle
     - r-pkgconfig
     - r-rlang
-    - r-vctrs >=0.2.0
+    - r-vctrs >=0.2.1
 
 test:
   commands:
@@ -41,11 +45,11 @@ test:
 
 about:
   home: https://github.com/tidyverse/hms
-  license: GPL-3
-  summary: Implements an S3 class for storing and formatting time-of-day values, based on the
-    'difftime' class.
-  license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license: MIT
+  summary: Implements an S3 class for storing and formatting time-of-day values, based on the 'difftime' class.
+  license_family: MIT
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
 
 extra:
   recipe-maintainers:
