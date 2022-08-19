@@ -1,4 +1,4 @@
-{% set version = "1.1.1" %}
+{% set version = "1.1.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/hms_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/hms/hms_{{ version }}.tar.gz
-  sha256: 6b5f30db1845c70d27b5de33f31caa487cdd0787cd80a4073375e5f482269062
+  sha256: 1ee6a9847336aaf58d3fcee5b56c290c2204e1213b6628862818419b2302bded
 
 build:
   merge_build_host: true  # [win]
