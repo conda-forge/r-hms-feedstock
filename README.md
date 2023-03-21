@@ -1,11 +1,11 @@
-About r-hms
-===========
+About r-hms-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-hms-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/tidyverse/hms
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-hms-feedstock/blob/main/LICENSE.txt)
 
 Summary: Implements an S3 class for storing and formatting time-of-day values, based on the 'difftime' class.
 
